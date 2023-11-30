@@ -1,50 +1,172 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
 
-<div id="content">
-    {% block content %}
-   
-    <h1>Descubre los Fondos Mutuos en Chile</h1>
+  <head>
 
-    <h2>Inversión Inteligente para Crecimiento Financiero</h2>
-  
-    <hr>
-  
-    <h3>¿Qué son los Fondos Mutuos?</h3>
-  
-    <p>Los Fondos Mutuos en Chile representan una opción de inversión colaborativa, permitiendo a los inversionistas unir sus recursos para acceder a carteras diversificadas de activos financieros. Este método de inversión es gestionado por Administradoras Generales de Fondos (AGF) bajo la supervisión de la Comisión del Mercado Financiero (CMF).</p>
-  
-    <hr>
-  
-    <h3>Diversificación para Mitigar Riesgos</h3>
-  
-    <p>Los Fondos Mutuos agrupan inversiones en una variedad de instrumentos financieros, como acciones, bonos y otros valores. Esta diversificación reduce el riesgo asociado con la inversión en un solo activo y brinda acceso a diferentes clases de activos sin necesidad de una gran inversión inicial.</p>
-  
-    <hr>
-  
-    <h3>Categorías de Fondos Mutuos en Chile</h3>
-  
-    <p>Los Fondos Mutuos se clasifican según su estrategia de inversión, riesgo y horizonte temporal. Categorías comunes incluyen fondos de acciones, bonos, mixtos y de corto plazo. Los inversionistas pueden seleccionar el fondo que mejor se adapte a sus metas financieras y tolerancia al riesgo.</p>
-  
-    <hr>
-  
-    <h3>Supervisión Rigurosa para Proteger a los Inversionistas</h3>
-  
-    <p>La Comisión del Mercado de Valores (CMF) establece regulaciones estrictas para garantizar la transparencia en las operaciones y proteger los intereses de los inversionistas. Las Administradoras Generales de Fondos deben proporcionar información detallada sobre costos, incluyendo comisiones de administración y gastos operativos.</p>
-  
-    <hr>
-  
-    <h3>Rentabilidad Sujeta a Fluctuaciones del Mercado</h3>
-  
-    <p>Es importante recordar que la rentabilidad de los Fondos Mutuos está sujeta a las fluctuaciones del mercado, y rendimientos pasados no garantizan resultados futuros. Los inversionistas pueden comprar y vender participaciones diariamente, permitiendo flexibilidad en la gestión de sus inversiones.</p>
-  
-    <hr>
-  
-    <h3>Invierte con Conocimiento, Invierte en Fondos Mutuos</h3>
-  
-    <p>Los Fondos Mutuos en Chile ofrecen una oportunidad accesible y diversificada para construir un futuro financiero sólido. ¡Invierte con conocimiento y potencia tu crecimiento financiero hoy!</p>
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>LCIAT & Investors.</title>
+<!--
+
+https://templatemo.com/tm-558-klassy-cafe
+
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/static/css/css1/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/css1/font-awesome.css">
+
+    <link rel="stylesheet" href="/static/css/css1/templatemo-klassy-cafe.css">
+
+    <link rel="stylesheet" href="/static/css/css1/owl-carousel.css">
+
+    <link rel="stylesheet" href="/static/css/css1/lightbox.css">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a class="logo">
+                            <img src="/static/css/images/LCIAT.png" align="LCIAT & Investors.">
+                        </a>
+
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{{ url_for('descripcion_fm') }}">Sobre FFMM</a></li>
+                            <li class="scroll-to-section"><a href="{{ url_for('rentabilidades') }}">Rentabilidades FFMM</a></li>
+                            <li class="scroll-to-section"><a href="{{ url_for('portafolios') }}">Portafolio FFMM</a></li>
+                            </li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Portafolios FFMM</span>
+                        </a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="left-content">
+                        <div class="inner-content">
+                            <h4>Fondos</h4>
+                            <h6>Mutuos</h6>
+                            <div class="main-white-button scroll-to-section">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="main-banner header-text">
+                        <div class="Modern-Slider">
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="/static/css/images/hh.png" alt="">
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="/static/css/images/slide-02.png" alt="">
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="/static/css/images/slide-03.png" alt="">
+                            </div>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="right-text-content">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a href="index.html"><img src="/static/css/images/white-logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="left-text-content">
+                        <p>© Martin & Asoc.
+                        <br>Rafita Winx & Inv.
+                        <br> Camilo Tapioka WW.
+                        <br>  Javi del Flow. 
+                        <br> Bayron limpieza.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/css/js/jquery-2.1.0.min.js"></script>
 
 
-        {{ table_data|safe }}
-    {% endblock %}
-</div>
+    <script src="/static/css/js/popper.js"></script>
+    <script src="/static/css/js/bootstrap.min.js"></script>
+
+
+    <script src="/static/css/js/owl-carousel.js"></script>
+    <script src="/static/css/js/accordions.js"></script>
+    <script src="/static/css/js/datepicker.js"></script>
+    <script src="/static/css/js/scrollreveal.min.js"></script>
+    <script src="/static/css/js/waypoints.min.js"></script>
+    <script src="/static/css/js/jquery.counterup.min.js"></script>
+    <script src="/static/css/js/imgfix.min.js"></script> 
+    <script src="/static/css/js/slick.js"></script> 
+    <script src="/static/css/js/lightbox.js"></script> 
+    <script src="/static/css/js/isotope.js"></script> 
+    
+
+    <script src="/static/css/js/custom.js"></script>
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+          {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

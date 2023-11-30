@@ -658,7 +658,7 @@ banner
 }
 
 #top .left-content {
-  background-image: url(../images/top-left-bg.jpeg);
+  background-image: url(/static/css/images/jjhs.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1766,3 +1766,15 @@ th {
 .boton:hover {
   background-color: #0056b3;
 }
+
+.imagennn {
+    width: 100%;
+    height: 300px; /* Altura de ejemplo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  

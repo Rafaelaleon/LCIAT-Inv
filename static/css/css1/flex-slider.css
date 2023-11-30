@@ -1,4 +1,17 @@
-
+/*
+ * jQuery FlexSlider v2.7.1
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ *
+ */
+/* ====================================================================================================================
+ * FONT-FACE
+ * ====================================================================================================================*/
 @font-face {
   font-family: 'flexslider-icon';
   src: url('../fonts/flexslider-icon.eot');
@@ -6,7 +19,9 @@
   font-weight: normal;
   font-style: normal;
 }
-
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
 .flex-container a:hover,
 .flex-slider a:hover {
   outline: none;
@@ -22,7 +37,9 @@
 .flex-pauseplay span {
   text-transform: capitalize;
 }
-
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
 .flexslider {
   margin: 0;
   padding: 0;
@@ -52,7 +69,9 @@ html[xmlns] .flexslider .slides {
 .no-js .flexslider .slides > li:first-child {
   display: block;
 }
-
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
 .flexslider {
   margin: 0;
   background: #fff;
@@ -155,8 +174,31 @@ html[xmlns] .flexslider .slides {
   cursor: default;
   z-index: -1;
 }
-
-
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
 .flex-control-nav {
   width: 100%;
   position: absolute;

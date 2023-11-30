@@ -1504,11 +1504,13 @@ $.ui.position = {
 	}
 };
 
+// fraction support test
 (function() {
 	var testElement, testElementParent, testElementStyle, offsetLeft, i,
 		body = document.getElementsByTagName( "body" )[ 0 ],
 		div = document.createElement( "div" );
 
+	//Create a "fake body" for testing based on method used in jQuery.support
 	testElement = document.createElement( body ? "div" : "body" );
 	testElementStyle = {
 		visibility: "hidden",
@@ -1546,6 +1548,17 @@ $.ui.position = {
 var position = $.ui.position;
 
 
+/*!
+ * jQuery UI Accordion 1.11.2
+ * http://jqueryui.com
+ *
+ * Copyright 2014 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/accordion/
+ */
+
 
 var accordion = $.widget( "ui.accordion", {
 	version: "1.11.2",
@@ -1561,6 +1574,7 @@ var accordion = $.widget( "ui.accordion", {
 			header: "ui-icon-triangle-1-e"
 		},
 
+		// callbacks
 		activate: null,
 		beforeActivate: null
 	},
@@ -1692,6 +1706,8 @@ var accordion = $.widget( "ui.accordion", {
 			}
 		}
 
+		// #5332 - opacity doesn't cascade to positioned elements in IE
+		// so we need to add the disabled class to the headers and panels
 		if ( key === "disabled" ) {
 			this.element
 				.toggleClass( "ui-state-disabled", !!value )

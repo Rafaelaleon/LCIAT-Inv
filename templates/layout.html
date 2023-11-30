@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
+    <title>Sobre Fondos Mutuos</title>
+
+    <link rel="x-icon" href="/static/css/images/favicon.ico" type="image/x-icon">
+
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $(function () {
             $("#datepicker").datepicker();
         });
-    </script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+    </script>   
+        <link rel="stylesheet" type="text/css" href="/static/css/css1/bootstrap.min.css">
 
-    <div class="wrapper">
+        <link rel="stylesheet" type="text/css" href="/static/css/css1/font-awesome.css">
+
+        <link rel="stylesheet" href="/static/css/css1/templatemo-klassy-cafe.css">
+
+        <link rel="stylesheet" href="/static/css/css1/owl-carousel.css">
+
+        <link rel="stylesheet" href="/static/css/css1/lightbox.css">
+    </head>
+    <body>
+
+    <div class="preloader">
+    <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
         <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>App Fondos Mutuos</h3>
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <a href=index.html class="logo">
+                                <img src="/static/css/images/LCIAT.png" align="LCIAT & Investors.">
+                            </a>
+                            <ul class="nav">
+                                <li class="scroll-to-section"><a href="{{ url_for('descripcion_fm') }}">Sobre FFMM</a></li>
+                                <li class="scroll-to-section"><a href="{{ url_for('rentabilidades') }}">Rentabilidades FFMM</a></li>
+                                <li class="scroll-to-section"><a href="{{ url_for('portafolios') }}">Portafolio FFMM</a></li>
+                                </li>
+                            </ul>        
+                            <a class='menu-trigger'>
+                                <span>Portafolios FFMM</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
             </div>
-            <ul class="list-unstyled components">
-                <li>
-                    <a class="asidebar" href="{{ url_for('fondos_mutuos') }}">Sobre FFMM</a>
-                </li>
-                <li>
-                    <a class="asidebar" href="{{ url_for('rentabilidades') }}">Rentabilidades FFMM</a>
-                </li>
-                <li>
-                    <a class="asidebar" href="{{ url_for('portafolios') }}">Portafolio FFMM</a>
-                </li>
-            </ul>
-        </nav>
-        <div id="content">
+        </header>
             {% block content %}{% endblock %}
         </div>
     </div>

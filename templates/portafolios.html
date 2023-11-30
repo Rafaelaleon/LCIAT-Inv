@@ -1,8 +1,14 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="left-text-content">
 <form id="myForm" method="post">
-    <h1>Portafolio FFMM</h1>
+    <h1>Portafolios Fondos Mutuos</h1>
+    <p><br>Los portafolios en los fondos mutuos son la combinación de activos financieros que una entidad posee como parte de su inversión. Su objetivo principal es diversificar los activos para distribuir el riesgo y maximizar el rendimiento.</p>
     <table class="form-table">
         <tr>
             <td>
@@ -36,12 +42,12 @@
                 </select>
             </td>
         </tr>
-        <tr>
-            <button class="boton" onclick="submitForm2()">Consultar</button>
-        </tr>
     </table>
 
-    <br>
+    <tr>
+        <button class="boton" onclick="submitForm2()">Consultar</button>
+    </tr>
+
     <div class="contenedor">
     {{ html|safe }}
     </div>
@@ -60,9 +66,40 @@
     }
     $(document).ready(function() {
         $("#datepicker").datepicker({
-            altFormat: 'yy-mm-dd',
+            altFormat: 'dd-mm-yy',
             defaultDate: new Date('{{ fecha_actual }}')
         });
     });
 </script>
+    
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-xs-12">
+                <div class="right-text-content">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="logo">
+                    <a href="index.html"><img src="/static/css/images/white-logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <div class="left-text-content">
+                    <p>© Martin & Asoc.
+                    <br>Rafita Winx & Inv.
+                    <br> Camilo Tapioka WW.
+                    <br>  Javi del Flow. 
+                    <br> Bayron limpieza.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 {% endblock %}

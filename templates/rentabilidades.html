@@ -1,8 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="left-text-content">
     <form id="myForm" method="post">
-        <h1>Rentabilidad FFMM</h1>
+        <h2>Rentabilidades Fondos</h2>
         <div class="form-container">
             <div class="form-row">
                 <div>
@@ -36,10 +41,42 @@
 
         $(document).ready(function() {
             $("#datepicker").datepicker({
-                altFormat: 'yy-mm-dd', // Formato alternativo de visualización (puede ajustarse según tus necesidades)
+                altFormat: 'dd-mm-yy', // Formato alternativo de visualización (puede ajustarse según tus necesidades)
                 defaultDate: new Date('{{ fecha_actual }}') // Utiliza la fecha por defecto proporcionada por Flask
             });
         });
 
     </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-xs-12">
+                <div class="right-text-content">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="logo">
+                    <a href="index.html"><img src="/static/css/images/white-logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <div class="left-text-content">
+                    <p>© Martin & Asoc.
+                    <br>Rafita Winx & Inv.
+                    <br> Camilo Tapioka WW.
+                    <br>  Javi del Flow. 
+                    <br> Bayron limpieza.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
 {% endblock %}
